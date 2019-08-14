@@ -21,11 +21,13 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-18.04
-  - name: centos-7
+  - name: ubuntu/xenial64
+
 
 suites:
   - name: default
+    # run_list:
+    #   - recipe[node::nodejs]
     verifier:
       inspec_tests:
         - test/integration/default
